@@ -1,27 +1,37 @@
-import { View, StyleSheet, TextInput } from "react-native";
-import React from "react";
+import { useState } from "react";
+import { View, StyleSheet, TextInput, ActivityIndicator } from "react-native";
 import { Colors, Sizes } from "../utils/constants";
 import { Popover } from "./Popover";
 
 export function SearchInput() {
-  const [search, setSearch] = React.useState<string>("");
-  const [place, setPlace] = React.useState<Array<string>>([]);
+  const [search, setSearch] = useState<string>("");
+  const [place, setPlace] = useState<Array<string>>([]);
 
   return (
     <View style={styles.container}>
-      <TextInput
-        placeholder="Buscar local"
-        placeholderTextColor={Colors.gray[400]}
-        style={[
-          styles.input,
-          {
-            color: place.length > 0 ? "#FAFAFA" : Colors.white,
-            opacity: place.length > 0 ? 0.6 : 1,
-          },
-        ]}
-        editable={place.length > 0 ? false : true}
-        onChangeText={(text) => setSearch(text)}
-      />
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Buscar local"
+          placeholderTextColor={Colors.gray[400]}
+          style={[
+            styles.input,
+            {
+              color: place.length > 0 ? "#FAFAFA" : Colors.white,
+              opacity: place.length > 0 ? 0.6 : 1,
+            },
+          ]}
+          editable={place.length > 0 ? false : true}
+          onChangeText={(text) => setSearch(text)}
+        />
+        {search.length > 0 && (
+          <ActivityIndicator
+            color={Colors.blueLight}
+            size={32}
+            style={styles.loading}
+          />
+        )}
+      </View>
+
       {search.length > 0 && <Popover />}
     </View>
   );
@@ -30,6 +40,17 @@ export function SearchInput() {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
+  },
+
+  inputContainer: {
+    flexDirection: "row",
+    position: "relative",
+  },
+
+  loading: {
+    marginTop: 12,
+    right: 20,
+    position: "absolute",
   },
 
   input: {
