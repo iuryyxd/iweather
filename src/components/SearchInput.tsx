@@ -23,7 +23,7 @@ export function SearchInput() {
           editable={place.length > 0 ? false : true}
           onChangeText={(text) => setSearch(text)}
         />
-        {search.length > 0 && (
+        {place.length > 0 && (
           <ActivityIndicator
             color={Colors.blueLight}
             size={32}

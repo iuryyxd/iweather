@@ -30,14 +30,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     paddingHorizontal: 32,
-    position: "relative",
   },
 
   logo: {
-    position: "absolute",
-    top: 56
+    marginBottom: 192,
   },
 
   title: {
