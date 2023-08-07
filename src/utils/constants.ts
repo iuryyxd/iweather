@@ -18,32 +18,32 @@ export const Sizes = {
   heading: {
     hg: {
       size: 96,
-      lineHeight: "100%",
+      lineHeight: 100,
       font: "Nunito_800ExtraBold",
     },
     xl: {
       size: 48,
-      lineHeight: "120%",
+      lineHeight: 120,
       font: "Nunito_800ExtraBold",
     },
     lg: {
       size: 32,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_700Bold",
     },
     md: {
       size: 20,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_700Bold",
     },
     sm: {
       size: 16,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_700Bold",
     },
     xs: {
       size: 14,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_700Bold",
     },
   },
@@ -51,22 +51,22 @@ export const Sizes = {
   text: {
     lg: {
       size: 20,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_400Regular",
     },
     md: {
       size: 20,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_400Regular",
     },
     sm: {
       size: 16,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_400Regular",
     },
     xs: {
       size: 14,
-      lineHeight: "140%",
+      lineHeight: 140,
       font: "Nunito_400Regular",
     },
   },

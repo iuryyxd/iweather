@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import "./src/lib/dayjs";
 
@@ -40,7 +40,7 @@ export default function App() {
   return (
     <NavigationContainer onReady={onLayoutRootView}>
       <Routes />
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </NavigationContainer>
   );
 }
