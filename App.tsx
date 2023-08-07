@@ -7,6 +7,7 @@ import {
   useFonts,
   Nunito_400Regular,
   Nunito_700Bold,
+  Nunito_800ExtraBold
 } from "@expo-google-fonts/nunito";
 
 import { Routes } from "./src/screens/routes";
@@ -18,6 +19,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     Nunito_400Regular,
     Nunito_700Bold,
+    Nunito_800ExtraBold
   });
 
   useEffect(() => {
